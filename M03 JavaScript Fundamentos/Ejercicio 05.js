@@ -40,7 +40,7 @@ function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
-   return Hola + " " + nombre + "!"
+   return "Hola" +" " + nombre+"!"
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -66,7 +66,7 @@ function deEuroAdolar(euro) {
    // Supongamos que 1 euro equivale a 1.20 dólares.
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
    // Tu código:
-   return euro*1,2
+   return euro*1.20
 }
 
 function esVocal(letra) {

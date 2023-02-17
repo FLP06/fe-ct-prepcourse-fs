@@ -189,6 +189,12 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   let tablaSeis =[]
+   for(let i =0; i <=10; i++){
+      tablaSeis.push(i * 6)
+   }
+   return tablaSeis
+   
 
 }
 
