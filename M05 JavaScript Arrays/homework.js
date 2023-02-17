@@ -53,7 +53,7 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
-   return palabras.join("");
+   return palabras.join(" ");
 }
 palabras(" hola", "mundo")
 
@@ -61,14 +61,9 @@ function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+   return array.includes(elemento);
 
-   for(let i =0; i < array.length;i++){
-      if(array[i]===elemento){
-         return ture;
-      }
-
-   }
-   return false;
+   
 
 }
 
@@ -88,19 +83,26 @@ function promedioResultadosTest(resultadosTest) {
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
 
+   let total = 0
+   for(let i=0; i < resultadosTest.length; i++){
+      total = total + resultadosTest[i]
+      
+   }
+   return total / resultadosTest.length
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-   let maximo = arrayOfNums[0]
-   for(let i =0; i< arrayOfNums; i++){
-      if(arrayOfNums[i]> maximo){
-         maximo = arrayOfNums[i];
+   let numeroG=arrayOfNums[0]
+   for(let i =0; i < arrayOfNums.length; i++){
+      if(numeroG<arrayOfNums[i]){
+         numeroG = arrayOfNums[i]
       }
    }
-return maximo
+   return numeroG
+   
 }
 
 function multiplicarArgumentos() {
@@ -108,7 +110,13 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-   if(arguments.length<1) return 0;
+   if(arguments.length===0){
+     return 0 
+   }
+    
+    if(arguments.length===1){
+      return arguments[0]
+    }
    let total=1
    for(let i = 0; i< arguments.length;i++ ){
       total = total * arguments[i];
@@ -121,7 +129,7 @@ function cuentoElementos(array) {
    // Tu código:
    let contador=0
    for(let i =0; i < contador.length; i++){
-      if(array[1]> 19){
+      if(array[i]> 18){
          contador++
       }
    }
@@ -146,11 +154,13 @@ function empiezaConNueve(n) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   let num = n.toString()
-   if(num.charat(0)==="9"){
+
+   let num = n + ""
+   if(num.charAt(0)==9){
       return true
    }
    return false
+   
 
 }
 
@@ -159,7 +169,7 @@ function todosIguales(array) {
    // Caso contrario retornar false.
    // Tu código:
    for(let i =0; i < array.length; i++){
-     if(array[i] !== array[i +1 ]) {
+     if(array[0]!== array[i]){
       return false
      }
    }
@@ -171,20 +181,16 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-
    let nuevoArray =[]
-   for( let i = 0; i < array.length; i ++){
-      if(array[i]==="Enero" || array[i]==="Marzo" || array[i]=== Noviembre)
-      nuevoArray.push(array[i]);
+   for(let i =0; i < array.length;i++){
+      if(array[i]==="Enero"||array[i]==="Marzo" || array[i]==="Noviembre")
+      nuevoArray.push(array[i])
    }
-   if(nuevoArray < 3){
-      return "no se encontraron los meses pedidos"
+   if( nuevoArray < 3){
+      return "No se encontraron los meses pedidos"
    }
-   else{
-      return nuevoArray
-   }
+   return nuevoArray
 }
-
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
@@ -203,13 +209,15 @@ function mayorACien(array) {
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
    let nuevoArray =[]
-   for (let i = 0; i < array.length; i++) {
-      if(array > 100){
+   for(let i = 0; i < array.length;i++){
+      if(array>100){
          nuevoArray.push(array[i])
       }
    }
    return nuevoArray
+   
 }
+
 
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
@@ -224,8 +232,8 @@ function breakStatement(num) {
    // Tu código:
 
    let array=[]
-   let suma = numero
-   for (let i = 0; i < array.length; index++) {
+   let suma = num
+   for (let i = 0; i <10; index++) {
       suma = suma +2;
       if( suma === i) break 
 
