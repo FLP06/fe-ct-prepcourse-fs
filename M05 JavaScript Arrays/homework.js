@@ -230,24 +230,28 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-
-   let array=[]
-   let suma = num
-   for (let i = 0; i <10; index++) {
-      suma = suma +2;
-      if( suma === i) break 
-
-      else{ array.push(suma)
-
-      }  
-   }
-   if(i < 10){
-      return " se interrumpio el cliclo"
+   
+let array=[]
+let suma = num
+for(let i =0; i <10; i++){
+   suma = suma +2
+   if(suma===i){
+      break
    }
    else{
-      return array
+      array.push(suma)
    }
+   
 }
+if(i <10){
+   return "Se interrumpió la ejecución"
+}
+
+return array
+
+}
+  
+
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
@@ -256,20 +260,17 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
-
-   let arry =[]
-   let suma = numero
-   for (let i = 0; i < 10 ; i++) {
-      if(i === 5) continue;
+   let array =[]
+   let suma = num
+   for(let i = 0; 1<10; i++){
+      if(i===5)continue;
       else{
-         suma =suma +2;
-         arry.push(suma);
-      
+         suma=suma +2
+         array.push(suma)
       }
-   
-      
    }
-   return arry
+return array
+   
 }
 
 
