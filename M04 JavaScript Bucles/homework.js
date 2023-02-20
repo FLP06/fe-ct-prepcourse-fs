@@ -80,31 +80,22 @@ function colors(color) {
    // Si no es ninguno de esos colores           --> "Color not found".
    // IMPORTANTE: utilizar el statement SWITCH.
    // Tu código:
-   if(color==="blue"){
-      return "This is blue"
+   switch(color){
+
+      case "blue": return "This is blue"
+      case " red": return "This is red"
+      case "green": return "This is green"
+      case "orange": return "This is orange"
+      default: return "Color not found"
+
    }
-   else if(color==="red"){
-      return "This is red"
-   }
-   else if(color==="green"){
-      return "This is green"
-   }
-   else if(color ===" orange"){
-      return "This is orange"
-   }
-   return "Color not found"
-}
+};
 
 function esDiezOCinco(num) {
    // Retornar true si "num" es 10 o 5.
    // De lo contrario, retornar false.
    // Tu código:
-   if(num===10||5){
-      return true
-   }
-     else{
-      return false
-     } 
+   return num===10||num ===5
    
 }
 
